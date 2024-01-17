@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { workTile } from "../components/workTile";
+import { WorkTile } from "../components/workTile";
 import "./App.css";
 
 const urlBase = "https://jsonplaceholder.typicode.com/photos";
@@ -21,14 +21,14 @@ function App() {
       <div>
     {toDo.map((workTile) => {
       return (
-        <workTile 
+        <WorkTile 
         key={workTile.id}
         albumId={workTile.albumId} 
         Id={workTile.Id} 
         title={workTile.title} 
         url={workTile.url} 
         thumbnailUrl={workTile.thumbnailUrl} 
-        ></workTile>
+        ></WorkTile>
       )
     })}
   </div>
